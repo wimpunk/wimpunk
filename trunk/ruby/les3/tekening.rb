@@ -13,14 +13,21 @@ class Tekening
   end
   
   def body()
-   (2..@aantal-1).each do
-      print(@teken)
-       (2..@aantal-1).each do
-        print(' ')
-      end
-      print(@teken)
-      printf("\n")
+    # een geformateerde string
+    lijn = sprintf("#@teken%#{@aantal -1}s\n",@teken)  
+    2.upto(@aantal-1) do 
+      printf(lijn) 
     end
+    
+    #     (2..@aantal-1).each do
+    #      print(@teken)
+    #       (2..@aantal-1).each do
+    #        print(' ')
+    #      end
+    #      print(@teken)
+    #      printf("\n")
+    #    end
+    
   end
   
   def alles()
@@ -29,12 +36,12 @@ class Tekening
     lijn()
   end
   
-  def driehoek()
-    for i in (1..@aantal)
+  def driehoek(cnt=@aantal)
+    for i in (1..cnt)
       for j in (1..i)
         if (j==1 || j==i) 
           print(@teken)
-        elsif (i==@aantal)
+        elsif (i==cnt)
           print(@teken)
         else
           print(' ')

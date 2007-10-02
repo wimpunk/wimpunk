@@ -10,6 +10,8 @@ class Tekening_applic
   mine.alles()
   
   driehoek = Tekening.new(5,'x')
-  driehoek.driehoek()
+  # ik moet nog kijken naar het voorbeeld van de les
+  # maar dit zou ook moeten lukkne
+  mine.driehoek(5)
   
 end
