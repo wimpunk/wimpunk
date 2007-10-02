@@ -14,4 +14,7 @@ class Tekening_applic
   # maar dit zou ook moeten lukkne
   mine.driehoek(5)
   
+  s = String.new("Wim")
+  print s[1].to_s
+  
 end
