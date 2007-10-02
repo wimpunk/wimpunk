@@ -14,6 +14,8 @@ class Tekening
   
   def body()
     # een geformateerde string
+    # deze zou ook moetne kunnen door geen sprintf te 
+    # gebruiken
     lijn = sprintf("#@teken%#{@aantal -1}s\n",@teken)  
     2.upto(@aantal-1) do 
       printf(lijn) 
@@ -35,6 +37,10 @@ class Tekening
     body()
     lijn()
   end
+  
+  # TODO: deze een beetje opkuisen
+  # http://www.ruby-doc.org/docs/ProgrammingRuby/html/ref_c_integer.html#Integer.upto
+  
   
   def driehoek(cnt=@aantal)
     for i in (1..cnt)
