@@ -1,13 +1,12 @@
  # vraag de naam van de gebruiker en beeld een welkomst bericht af
-  print "graag jouw naam:"
-  naam = gets
+  print "Graag jouw naam: "
+  naam = gets.chomp
   printf("Welkom %s\n", naam)
   
   # vragen naar een geheel getal < 100
   begin
   print "Geef een geheel < 100:"
-  geheel = gets
-  geheel = Integer(geheel)
+  geheel = gets.to_i
   end until ( geheel < 100 )
   
   # vragen naar een gebroken getal
