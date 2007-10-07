@@ -43,18 +43,26 @@ class Tekening
   
   
   def driehoek(cnt=@aantal)
-    for i in (1..cnt)
-      for j in (1..i)
-        if (j==1 || j==i) 
-          print(@teken)
-        elsif (i==cnt)
-          print(@teken)
-        else
-          print(' ')
-        end
-      end
-      printf("\n")
+    #    for i in (1..cnt)
+    #      for j in (1..i)
+    #        if (j==1 || j==i) 
+    #          print(@teken)
+    #        elsif (i==cnt)
+    #          print(@teken)
+    #        else
+    #          print(' ')
+    #        end
+    #      end
+    #      printf("\n")
+    #    end
+    #    printf("Na eerste driehoek\n")
+    
+    printf("#@teken\n")
+    if (cnt>1) 
+      2.upto(cnt-1) { |i| printf("#@teken%#{i-1}s\n",@teken)   }
+      1.upto(cnt) { printf("@teken") }
     end
+    print "\n"
   end
   
 end
