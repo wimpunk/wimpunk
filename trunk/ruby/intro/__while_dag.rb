@@ -11,7 +11,7 @@ class WhileDag
     when 6, 7 
       print('weekend ') 
       puts('- zaterdag' ) if dag == 6
-      puts('- zondag')if dag == 7
+      puts('- zondag')    if dag == 7
     when 5 : puts( 'nogmaals vrijdag' )
     else puts( 'ongeldige dag...')     
     end
