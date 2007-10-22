@@ -15,6 +15,5 @@ puts("kar1 = #{kar1}")
 puts("kar2 = #{kar2}")
 
 kar1.upto(kar2) do
-|i| puts "#{i} #{i[0]}"
+  |i| puts "#{i} #{i[0]}"
 end
-
