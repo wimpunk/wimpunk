@@ -9,16 +9,20 @@ class Werknemer_applic
   end
   
   def lijst_leider(gewenste_toestand)
+    # initiatie
     lijst = []
     cnt=0
     
+    # voor elke element in de lijst genaamd member:
+    # * kijk of het een Werknemer is
+    # * als het leiderschap zich in de gewenste toestand bevind: steek hem erbij
     @lijst.each do
       |member|
-      next if ! member.instance_of?(Werknemer) 
-      if member.leider! == gewenste_toestand
-        lijst[cnt] = member
-        cnt+=1
-      end
+      next if ! member 
+      # next if ! member.instance_of?(Werknemer) 
+      next if ! member.leiderschap?(gewenste_toestand)
+      lijst[cnt] = member
+      cnt+=1      
     end
     return lijst
   end
