@@ -9,7 +9,7 @@ class Werknemer
     Werknemer.new(naam,false)
   end
   
-  def leider
+  def leider!
     @functie
   end
   
