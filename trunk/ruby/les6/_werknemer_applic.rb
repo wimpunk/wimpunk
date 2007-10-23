@@ -1,4 +1,3 @@
-#...
 require "les4/format_vraag"
 require "les6/werknemer"
 
@@ -6,28 +5,30 @@ class Werknemer_applic
   def maak_lijst
     leider = true
     @lijst = Werknemer.enkel_naam('Jan'), Werknemer.new('Els', leider) \
-    , Werknemer.enkel_naam('Leen'), Werknemer.new('Piet', leider) 
+    , Werknemer.enkel_naam('Leen'), nil, Werknemer.new('Piet', leider) 
   end
   
-  def team_leiders
+  def lijst_leider(gewenste_toestand)
     lijst = []
     cnt=0
     
     @lijst.each do
       |member|
-      if member.leider
+      next if ! member.instance_of?(Werknemer) 
+      if member.leider! == gewenste_toestand
         lijst[cnt] = member
         cnt+=1
       end
     end
-    # lijst[] = @lijst
     return lijst
   end
   
+  def team_leiders
+    return lijst_leider(true)
+  end
+  
   def geen_team_leiders
-    lijst = []
-    #. . .
-    return lijst
+    return lijst_leider(false)
   end
   
 end
