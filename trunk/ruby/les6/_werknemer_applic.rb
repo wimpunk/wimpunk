@@ -4,25 +4,25 @@ require "les6/werknemer"
 class Werknemer_applic
   def maak_lijst
     leider = true
-    @lijst = Werknemer.enkel_naam('Jan'), Werknemer.new('Els', leider) \
-    , Werknemer.enkel_naam('Leen'), nil, Werknemer.new('Piet', leider) 
+    @lijst = Werknemer.enkel_naam('Jan'), Werknemer.new('Els', leider) , \
+    Werknemer.enkel_naam('Leen'), nil, Werknemer.new('Piet', leider) 
   end
   
   def lijst_leider(gewenste_toestand)
     # initiatie
     lijst = []
-    cnt=0
+    cnt=-1
     
     # voor elke element in de lijst genaamd member:
     # * kijk of het een Werknemer is
     # * als het leiderschap zich in de gewenste toestand bevind: steek hem erbij
     @lijst.each do
       |member|
-      next if ! member 
-      # next if ! member.instance_of?(Werknemer) 
-      next if ! member.leiderschap?(gewenste_toestand)
-      lijst[cnt] = member
-      cnt+=1      
+      next if ! member # we testen ook of we geen nil hebben
+      # deze test levert waarschijnlijk een net iets te zwaar resultaat op.
+      # maar het voorkomt wel dat er getest wordt op het leiderschap van apen
+      next if ! member.instance_of?(Werknemer) 
+      lijst[cnt+=1] = member if member.leiderschap?(gewenste_toestand)
     end
     return lijst
   end
@@ -39,6 +39,7 @@ end
 
 applic = Werknemer_applic.new
 applic.maak_lijst
+
 puts '...: 1 :...'
 puts "de team leiders zijn: " 
 puts applic.team_leiders
