@@ -50,3 +50,8 @@ puts "de team leiders zijn: "
 puts applic.team_leiders
 puts "volgende werknemers leiden geen team: "
 puts applic.geen_team_leiders
+puts '...: 2 :...'
+puts "de team leiders zijn: " 
+puts applic.lijst_leider(true)
+puts "volgende werknemers leiden geen team: "
+puts applic.lijst_leider(false)
