@@ -1,6 +1,6 @@
 class Werknemer
   
-  def initialize naam='onbekend',functie=false 
+  def initialize naam,functie
     @naam = naam
     @functie = functie
   end
@@ -9,11 +9,15 @@ class Werknemer
     Werknemer.new(naam,false)
   end
   
-  def leider!
+  def leider?
     @functie
   end
   
+  def leiderschap?(toestand)
+    @functie == toestand
+  end
+  
   def to_s
-    @naam.to_s
+    @naam.to_s + " - leider: " + @functie.to_s
   end
 end
