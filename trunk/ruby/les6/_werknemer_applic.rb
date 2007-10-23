@@ -10,6 +10,8 @@ class Werknemer_applic
   
   def lijst_leider(gewenste_toestand)
     # initiatie
+    #    * een lege lijst
+    #    * cnt starten op -1 zodat een cnt+=1 kan werken.  Hierdoor wordt ook 0.
     lijst = []
     cnt=-1
     
@@ -23,6 +25,9 @@ class Werknemer_applic
       # maar het voorkomt wel dat er getest wordt op het leiderschap van apen
       next if ! member.instance_of?(Werknemer) 
       lijst[cnt+=1] = member if member.leiderschap?(gewenste_toestand)
+      
+      # Er is natuurlijk ook wel een fijne manier, de all-in-one oplossing
+      # lijst[cnt+=1]=member if (member && member.leider?)
     end
     return lijst
   end
