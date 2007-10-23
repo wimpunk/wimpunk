@@ -18,6 +18,6 @@ class Werknemer
   end
   
   def to_s
-    @naam.to_s + " - leider: " + @functie.to_s
+    "#{@naam}#{@functie?' is een leider':' is een vlijtige werker'}"
   end
 end
