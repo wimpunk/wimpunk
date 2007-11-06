@@ -10,9 +10,11 @@ class Dier
     @naam = naam
   end
   def initialize *args
+  # argumenten worden opgevangen door args
     @naam = args[0]
     @soort = args[1]
   end
+  
   def blaf(character)
     print "#{@naam} blaft: "
     if @soort != nil && @soort == 'hond'
@@ -24,6 +26,8 @@ class Dier
   end
   
   #default geluid is een * teken  
+  # deze kan niet aangeroepen worden, 
+  # enkel de tweede wordt opgeroepen
   def maak_geluid(sterkte)
     print "#{@naam} maakt geluid(1): "
     if (sterkte > 5)
@@ -36,7 +40,7 @@ class Dier
   end
   
   #   geluidsteken komt binnen als 2de parameter
-  def maak_geluid(sterkte, character)
+  def maak_geluid(sterkte, character="*")
     print "#{@naam} maakt geluid(2): "
     if (sterkte > 5)
       sterkte.times{print character * 3 }
