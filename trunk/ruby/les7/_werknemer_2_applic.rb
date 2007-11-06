@@ -12,11 +12,11 @@ class Werknemer_2_applic
     #  de andere behoren om beurten tot één van de twee afdelingen
     
     # stap_1 maak de 2 afdelingen en bewaar ze in een lijst 
-
     @afdelingen = Afdeling.new(1,"eerste afdeling"), Afdeling.new(2,"tweede afdeling")
     
     # stap_2 ken 1ste/2de afdeling toe aan 1ste/2de werknemer uit de lijst
-  
+     @afdelingen[0].chef = @werknemers[0]
+    
     
     
     # stap_3 ken een afdeling toe aan elke werknemer 

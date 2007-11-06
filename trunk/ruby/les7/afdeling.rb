@@ -11,10 +11,11 @@ class Afdeling
  
   def to_s
     "#{@code} #{@omschrijving}"
+    puts @chef if @chef 
   end
  
 end
-
-puts(mine=Afdeling.new(69,"mijn afdeling"))
-puts(mine.code)
-puts mine.omschrijving
+#
+#puts(mine=Afdeling.new(69,"mijn afdeling"))
+#puts(mine.code)
+#puts mine.omschrijving
