@@ -3,3 +3,17 @@
 * herhaling: classe kan overschreven worden (pag. 37), enkel aanvaardbaar als het echt een nuttige toepassing heeft
 * herhaling: attributen van klassen (pag.37) - getters en setters zijn niet nodig, zie speciale methoden
 * berichten naar instanties
+* _dier.rb: 
+ (problemen)
+ voorkomen van herhaling functie
+
+ werknemer opgave
+ 
+een werknemer behoort tot een bepaalde afdeling. een afdeling heeft een code, een
+ omschrijving en een werknemer als chef
+maak een schematische voorstelling van de klasse afdeling naar volgende eisen: een afdeling
+moet minimaal een code en een omschrijving hebben.  de werknemer (zie vroegere klasse)
+die chef is kan nadien altijd gewijzigd worden, ook kunnen afdelingen bestaan die geen chef
+hebben.
+verwoord het schema in ruby en breid vorige werknemers applicatie uit door 2 afdelingen
+te creeren en een afdeling toe te kennen aan de werknemers uit de lijst.
