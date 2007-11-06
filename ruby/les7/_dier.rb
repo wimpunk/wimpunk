@@ -28,12 +28,13 @@ class Dier
   def blaf(character)
   # voorkomen van een lege string bij het blaffen
     print "#{@naam?@naam:'?'} blaft: "
-    if @soort != nil && @soort == 'hond'
+    # if @soort != nil && @soort == 'hond'
+    if @soort == 'hond' # test op nil hoeft niet omdat het moet een hond zijn
       3.times{print character}
       puts
       return
     end
-    puts ' kan niet blaffen'
+    puts 'kan niet blaffen'
   end
   
   #default geluid is een * teken  
@@ -72,15 +73,21 @@ class Dier
 end
 
 dieren = Dier.opSoort('hond'), Dier.opNaam('Aya'), Dier.new('Xorty', 'hond')
+
+# nummer 1: gewoon afdrukken van het beest
 puts '1.'
 dieren.each { |een_dier| 
   puts een_dier
 }
 
+# nummer 2: blaffen, maar niet als het geen hond heeft 
+# (tenzij het een valling heeft?)
 puts '2.'
 dieren.each { |een_dier| 
   een_dier.blaf('#')
 }
+
+
 puts '3.'
 dieren.each { |een_dier| 
   een_dier.maak_geluid(6)
