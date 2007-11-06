@@ -3,16 +3,21 @@ class Dier
   attr_accessor :naam
   attr :gezin, true
   
-  def initialize soort
-    @soort = soort
+  def self.soort(soort)
+    Dier.new('(zondernaam)',soort)
   end
-  def initialize naam
-    @naam = naam
+  
+  def self.naam(naam)
+    Dier.new(naam,'(zondersoort)')
   end
-  def initialize *args
+  
+  # def initialize *args
   # argumenten worden opgevangen door args
-    @naam = args[0]
-    @soort = args[1]
+  # wegens geen controle op de argumenten 
+  # is het beter om het zo te doen:
+  def initialize naam,soort
+    @naam = naam
+    @soort = soort
   end
   
   def blaf(character)
@@ -40,7 +45,7 @@ class Dier
   end
   
   #   geluidsteken komt binnen als 2de parameter
-  def maak_geluid(sterkte, character="*")
+  def maak_sterkgeluid(sterkte, character="*")
     print "#{@naam} maakt geluid(2): "
     if (sterkte > 5)
       sterkte.times{print character * 3 }
@@ -56,7 +61,7 @@ class Dier
   end
 end
 
-dieren = Dier.new('hond'), Dier.new('Aya'), Dier.new('Xorty', 'hond')
+dieren = Dier.soort('hond'), Dier.naam('Aya'), Dier.new('Xorty', 'hond')
 puts '1.'
 dieren.each { |een_dier| 
   puts een_dier
@@ -72,5 +77,5 @@ dieren.each { |een_dier|
 }
 puts '4.'
 dieren.each { |een_dier| 
-  een_dier.maak_geluid(6, '%')
+  een_dier.maak_sterkgeluid(6, '%')
 }
