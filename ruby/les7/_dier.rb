@@ -3,6 +3,8 @@ class Dier
   attr_accessor :naam
   attr :gezin, true
   
+  # constructors gaan in de fout, d'er kan maar 1 constructor
+  # zijn.
   def self.soort(soort)
     Dier.new('(zondernaam)',soort)
   end
@@ -34,17 +36,21 @@ class Dier
   # deze kan niet aangeroepen worden, 
   # enkel de tweede wordt opgeroepen
   def maak_geluid(sterkte)
-    print "#{@naam} maakt geluid(1): "
-    if (sterkte > 5)
-      sterkte.times{print '***'}
-      puts
-      return
-    end
-    sterkte.times{ print '*'}
-    puts
+    #    print "#{@naam} maakt geluid(1): "
+    #    if (sterkte > 5)
+    #      sterkte.times{print '***'}
+    #      puts
+    #      return
+    #    end
+    #    sterkte.times{ print '*'}
+    #    puts
+    maak_sterkgeluid(sterkte, "*")
   end
   
-  #   geluidsteken komt binnen als 2de parameter
+  #   geluidsteken komt binnen als 2de parameter dus
+  # hebben we een aantal mogelijkheden om dit op te lossen
+  # - default value
+  # - hernoemen
   def maak_sterkgeluid(sterkte, character="*")
     print "#{@naam} maakt geluid(2): "
     if (sterkte > 5)
