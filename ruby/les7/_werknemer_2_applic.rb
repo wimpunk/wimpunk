@@ -13,7 +13,7 @@ class Werknemer_2_applic
     
     # stap_1 maak de 2 afdelingen en bewaar ze in een lijst 
 
-    @afdelingen = []
+    @afdelingen = Afdeling.new(1,"eerste afdeling"), Afdeling.new(2,"tweede afdeling")
     
     # stap_2 ken 1ste/2de afdeling toe aan 1ste/2de werknemer uit de lijst
   
@@ -35,6 +35,9 @@ class Werknemer_2_applic
   end
   
   def toon_afdelingen
+    @afdelingen.each {|afd|
+    puts afd
+    }
     
   end
   
@@ -49,6 +52,6 @@ end
 applic = Werknemer_2_applic.new
 applic.maak_werknemers
 applic.assigneer_afdelingen
-#applic.toon_afdelingen
+applic.toon_afdelingen
 #applic.toon_werknemers
 #applic.wijzig_afdeling_van_eerste_chef
