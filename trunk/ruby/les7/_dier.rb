@@ -26,7 +26,8 @@ class Dier
   end
   
   def blaf(character)
-    print "#{@naam} blaft: "
+  # voorkomen van een lege string bij het blaffen
+    print "#{@naam?@naam:'?'} blaft: "
     if @soort != nil && @soort == 'hond'
       3.times{print character}
       puts
@@ -55,7 +56,7 @@ class Dier
   # - default value
   # - hernoemen
   def maak_sterkgeluid(sterkte, character="*")
-    print "#{@naam} maakt geluid(2): "
+    print "#{@naam?@naam:'?'} maakt geluid(2): "
     if (sterkte > 5)
       sterkte.times{print character * 3 }
       puts
@@ -66,7 +67,7 @@ class Dier
   end
   
   def to_s
-    "#{naam} is een #{soort}"
+    "#{@naam?@naam:'?'} is een #{@soort?@soort:'?'}"
   end
 end
 
