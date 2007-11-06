@@ -1,0 +1,5 @@
+20071106
+* herhaling vorige les: slechts 1 constructor mogelijk
+* herhaling: classe kan overschreven worden (pag. 37), enkel aanvaardbaar als het echt een nuttige toepassing heeft
+* herhaling: attributen van klassen (pag.37) - getters en setters zijn niet nodig, zie speciale methoden
+* berichten naar instanties
