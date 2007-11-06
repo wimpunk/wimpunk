@@ -5,12 +5,15 @@ class Dier
   
   # constructors gaan in de fout, d'er kan maar 1 constructor
   # zijn.
-  def self.soort(soort)
-    Dier.new('(zondernaam)',soort)
+  def self.opSoort(soort)
+    Dier.new(nil,soort)
   end
+  # nil is hier een betere oplossing dan gebruik te maken van 
+  # een string naar keuze aangezien die misschien wel eens zou 
+  # kunnen voorkomen als een naam en/of soort.
   
-  def self.naam(naam)
-    Dier.new(naam,'(zondersoort)')
+  def self.opNaam(naam)
+    Dier.new(naam,nil)
   end
   
   # def initialize *args
@@ -67,7 +70,7 @@ class Dier
   end
 end
 
-dieren = Dier.soort('hond'), Dier.naam('Aya'), Dier.new('Xorty', 'hond')
+dieren = Dier.opSoort('hond'), Dier.opNaam('Aya'), Dier.new('Xorty', 'hond')
 puts '1.'
 dieren.each { |een_dier| 
   puts een_dier
