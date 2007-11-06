@@ -28,6 +28,7 @@ class Werknemer_applic
       
       # Er is natuurlijk ook wel een fijne manier, de all-in-one oplossing
       # lijst[cnt+=1]=member if (member && member.leider?)
+      # lijst[cnt+=1]=member if (member && member.leider?.eql(gewenste_toestand))
     end
     return lijst
   end
