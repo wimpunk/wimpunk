@@ -16,6 +16,7 @@ class Werknemer_2_applic
     
     # stap_2 ken 1ste/2de afdeling toe aan 1ste/2de werknemer uit de lijst
      @afdelingen[0].chef = @werknemers[0]
+     @afdelingen[1].chef = @werknemers[1]
     
     
     
