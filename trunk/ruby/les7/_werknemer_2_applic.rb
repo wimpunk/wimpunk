@@ -1,5 +1,5 @@
-require "klassen/werknemer_2"
-require "klassen/afdeling_2"
+require "les7/_werknemer_2"
+require "les7/afdeling"
 class Werknemer_2_applic
   def maak_werknemers
     leider = true
