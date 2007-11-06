@@ -1,9 +1,9 @@
-require "les7/_werknemer_2"
+require "les6/werknemer"
 require "les7/afdeling"
 class Werknemer_2_applic
   def maak_werknemers
     leider = true
-    @werknemers = Werknemer_2.enkel_naam('Jan'), Werknemer_2.new('Els', leider), Werknemer_2.enkel_naam('Leen'), Werknemer_2.new('Piet', leider) 
+    @werknemers = Werknemer.enkel_naam('Jan'), Werknemer.new('Els', leider), Werknemer.enkel_naam('Leen'), Werknemer.new('Piet', leider) 
   end
   
   def assigneer_afdelingen
@@ -15,16 +15,18 @@ class Werknemer_2_applic
     @afdelingen = Afdeling.new(1,"eerste afdeling"), Afdeling.new(2,"tweede afdeling")
     
     # stap_2 ken 1ste/2de afdeling toe aan 1ste/2de werknemer uit de lijst
-     @afdelingen[0].chef = @werknemers[0]
-     @afdelingen[1].chef = @werknemers[1]
+    @afdelingen[0].chef = @werknemers[0]
+    @afdelingen[1].chef = @werknemers[1]
     
     
     
     # stap_3 ken een afdeling toe aan elke werknemer 
     # OPGELET: de chef moet uiteraard tot zijn afdeling behoren (blijven) behoren
-
-  
-  
+    @werknemers.each {|arbeider|
+    # doe hier iets... 
+    }
+    
+    
   end
   
   def wijzig_afdeling_van_eerste_chef
@@ -37,7 +39,7 @@ class Werknemer_2_applic
   
   def toon_afdelingen
     @afdelingen.each {|afd|
-    puts afd
+      puts afd
     }
     
   end
