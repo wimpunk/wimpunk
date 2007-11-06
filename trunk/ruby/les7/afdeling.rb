@@ -10,8 +10,7 @@ class Afdeling
  end
  
   def to_s
-    "#{@code} #{@omschrijving}"
-    puts @chef if @chef 
+    "#{@code} #{@omschrijving} #{@chef?@chef:'nog geen chef'}"
   end
  
 end

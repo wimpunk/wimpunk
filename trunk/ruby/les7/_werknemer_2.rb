@@ -10,12 +10,18 @@ class Werknemer_2
   def Werknemer_2.enkel_naam naam
     self.new(naam, false) if naam
   end
-   
+  
   def leider?
     return @team_leider
   end
   
   def to_s
-    return "\t#{@naam} uit de afdeling #{@afdeling.code}"
+    
+    if @afdeling
+      return "\t#{@naam} uit de afdeling #{@afdeling.code}"
+    else 
+      return "\t#{@naam} uit een onbekende afdeling"
+    end
   end
+  
 end
