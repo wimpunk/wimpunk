@@ -12,3 +12,6 @@ status van het object kan wel worden veranderd
 6.5 Toegankelijkheid (pag 41)
 (tot pag 45 doorgewerkt)
 verder gewerkt aan werkenmer
+
+7.1 Arrays
+=> voor nieuwigheden: zie rubydoc
