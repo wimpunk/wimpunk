@@ -1,6 +1,6 @@
 require "les7/afdeling"
 class Werknemer
-  attr_accessor :afdeling
+  attr_reader :afdeling
   def initialize naam,functie
     @naam = naam
     @functie = functie
@@ -22,5 +22,10 @@ class Werknemer
   # hint: hier geen to_s van de afdeling gebruiken aangezien ook de to_s van werknemer
   # wordt opgeroepen om de naam van de chef aan te geven...
     "#{@naam}#{@functie?' is een leider':' is een vlijtige werker'} en zit bij afdeling #{@afdeling.code} #{@afdeling.omschrijving}"
+  end
+  
+  # voorkomen dat eventuele chefs worden overschreven
+  def afdeling=(afdeling)
+    @afdeling = afdeling if !@afdeling
   end
 end
