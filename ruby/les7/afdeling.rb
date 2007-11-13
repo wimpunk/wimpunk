@@ -1,16 +1,22 @@
 require "les6/werknemer"
 class Afdeling
  
- attr_accessor :chef
+ attr_accessor :chef, :werknemers
  attr_reader :code,:omschrijving
+ 
  
  def initialize(code, omschrijving)
    @code = code
    @omschrijving = omschrijving
+   @werknemers = [];
  end
  
   def to_s
     "#{@code} #{@omschrijving} chef:#{@chef?@chef:'nog geen chef'}"
+  end
+  
+  def add_werknemer werknemer
+    @werknemers.add = werknemer;
   end
  
 end

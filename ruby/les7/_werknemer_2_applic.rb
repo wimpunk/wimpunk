@@ -20,16 +20,19 @@ class Werknemer_2_applic
     
     # stap_3 ken een afdeling toe aan elke werknemer 
     # OPGELET: de chef moet uiteraard tot zijn afdeling behoren (blijven) behoren
-    @werknemers[0].afdeling = @afdelingen[0]
-    @werknemers[1].afdeling = @afdelingen[1]
-    @werknemers[2].afdeling = @afdelingen[0]
-    @werknemers[3].afdeling = @afdelingen[1]
+    #    @werknemers[0].afdeling = @afdelingen[0]
+    #    @werknemers[1].afdeling = @afdelingen[1]
+    #    @werknemers[2].afdeling = @afdelingen[0]
+    #    @werknemers[3].afdeling = @afdelingen[1]
     
-    
+    cnt = 0 
     @werknemers.each {|arbeider|
       # doe hier iets... 
       #arbeider.afdeling = @afdelingen[0]
       
+      @afdelingen[cnt%2].add_werknemer arbeider
+      puts "#{cnt%2} arbeider"
+      cnt+=1
     }
     
     
@@ -44,6 +47,7 @@ class Werknemer_2_applic
   end
   
   def toon_afdelingen
+  # toon_lijst hebben ze ervan gemaakt in de les
     @afdelingen.each {|afd|
       puts afd
     }
@@ -51,12 +55,9 @@ class Werknemer_2_applic
   end
   
   def toon_werknemers
-        @werknemers.each {|arbeider|
-      # doe hier iets... 
-      #arbeider.afdeling = @afdelingen[0]
+    @werknemers.each {|arbeider|
       puts(arbeider)
     }
-    
   end
   
 end
@@ -64,8 +65,8 @@ end
 # client applicatie die afdelingen toekent aan de werknemers en daarna de lijsten afbeeldt
 
 applic = Werknemer_2_applic.new
-applic.maak_werknemers
-applic.assigneer_afdelingen
-applic.toon_afdelingen
-applic.toon_werknemers
-#applic.wijzig_afdeling_van_eerste_chef
+      applic.maak_werknemers
+      applic.assigneer_afdelingen
+      applic.toon_afdelingen
+      applic.toon_werknemers
+      applic.wijzig_afdeling_van_eerste_chef
