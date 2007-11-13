@@ -10,7 +10,7 @@ class Afdeling
  end
  
   def to_s
-    "#{@code} #{@omschrijving} #{@chef?@chef:'nog geen chef'}"
+    "#{@code} #{@omschrijving} chef:#{@chef?@chef:'nog geen chef'}"
   end
  
 end
