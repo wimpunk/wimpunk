@@ -25,14 +25,14 @@ class Werknemer_2_applic
     #    @werknemers[2].afdeling = @afdelingen[0]
     #    @werknemers[3].afdeling = @afdelingen[1]
     
-    cnt = 0 
+#    cnt = 0 
     @werknemers.each {|arbeider|
       # doe hier iets... 
-      #arbeider.afdeling = @afdelingen[0]
+      arbeider.afdeling = @afdelingen[0]
       
-      @afdelingen[cnt%2].add_werknemer arbeider
-      puts "#{cnt%2} arbeider"
-      cnt+=1
+#      @afdelingen[cnt%2].add_werknemer arbeider
+#      puts "#{cnt%2} arbeider"
+#      cnt+=1
     }
     
     
