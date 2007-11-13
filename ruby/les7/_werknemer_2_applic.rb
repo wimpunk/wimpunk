@@ -18,12 +18,18 @@ class Werknemer_2_applic
     @afdelingen[0].chef = @werknemers[0]
     @afdelingen[1].chef = @werknemers[1]
     
-    
-    
     # stap_3 ken een afdeling toe aan elke werknemer 
     # OPGELET: de chef moet uiteraard tot zijn afdeling behoren (blijven) behoren
+    @werknemers[0].afdeling = @afdelingen[0]
+    @werknemers[1].afdeling = @afdelingen[1]
+    @werknemers[2].afdeling = @afdelingen[0]
+    @werknemers[3].afdeling = @afdelingen[1]
+    
+    
     @werknemers.each {|arbeider|
-    # doe hier iets... 
+      # doe hier iets... 
+      #arbeider.afdeling = @afdelingen[0]
+      
     }
     
     
@@ -45,6 +51,11 @@ class Werknemer_2_applic
   end
   
   def toon_werknemers
+        @werknemers.each {|arbeider|
+      # doe hier iets... 
+      #arbeider.afdeling = @afdelingen[0]
+      puts(arbeider)
+    }
     
   end
   
@@ -56,5 +67,5 @@ applic = Werknemer_2_applic.new
 applic.maak_werknemers
 applic.assigneer_afdelingen
 applic.toon_afdelingen
-#applic.toon_werknemers
+applic.toon_werknemers
 #applic.wijzig_afdeling_van_eerste_chef
