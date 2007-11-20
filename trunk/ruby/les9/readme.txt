@@ -13,3 +13,4 @@ bij een each krijgen we [0] -> key, [1] -> value
 
 oefening hashes 47.1
 
+ruby-doc.org
