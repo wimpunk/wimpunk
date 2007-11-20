@@ -11,6 +11,7 @@ class Cursus
     @aantal_cursisten = aantal
   end
   
+  
   def overdag?
     @tijdstip < 18
   end
