@@ -9,10 +9,11 @@ class Woord_Teller
     hash = Hash.new()
     
     # splitten op de spatie
+    # reguliere expressie: tekst.scan(/\w+/)
     @zin.each(' ') {|woord| 
       # verwijderen van de eventuele laatste blanco
       woord.strip!
-      # als het woord niet gevonden is: initieren op 1
+      # als het woord niet gevonden is: starten op 0
       hash[woord]=0 if ! hash[woord]
       hash[woord]+=1
     }
