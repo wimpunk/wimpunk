@@ -26,12 +26,20 @@ class Woord_Teller
   
   def inspect
     myhash = self.split
-    myhash.each {|a| printf "woord %s komt %i keer voor\n", a[0], a[1]}
+    str = @zin.concat("\n")
+    myhash.each {|a| str << sprintf("woord %s komt %i keer voor\n", a[0], a[1])}
+    return str
   end
+  
 end
 
 # zin die we gebruiken
 telwoord = Woord_Teller.new "wij willen Willem weg wil Willem wijzer worden wij willen Willem weer"
 puts telwoord.split.inspect
 puts telwoord
-telwoord.inspect
+
+puts "Resultaat inspect"
+puts telwoord.inspect
+
+
+
