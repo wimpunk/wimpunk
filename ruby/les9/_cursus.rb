@@ -25,4 +25,9 @@ class Cursus
     tijdstip = overdag? ? "overdag" : "\'s avonds"
     "\tDe cursus \'#{@naam}\' wordt #{tijdstip} gegeven door #{@docent}"
   end
+
+  def <=> a
+    @naam <=> a.naam
+  end
+
 end
