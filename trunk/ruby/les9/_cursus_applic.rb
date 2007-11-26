@@ -1,4 +1,4 @@
-require "les9/_ cursus"
+require "les9/_cursus"
 
 class Cursus_applic
   cursussen = [Cursus.new('Ruby - 1','Jan', 18.15, 10),
@@ -17,7 +17,9 @@ class Cursus_applic
   
   
   puts '6. Alle cursussen gesorteerd op cursus naam: '
-  cursussen.
+  mine = cursussen.sort
+  mine.each { |curs| puts curs }
+
   
   puts '7. Alle cursussen voorafgegaan met de index: '
   
