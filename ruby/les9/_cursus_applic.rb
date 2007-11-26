@@ -15,11 +15,8 @@ class Cursus_applic
   ruby_cursussen.each {|curs| puts curs}
   andere_cursussen.each {|curs| puts curs}
   
-  
   puts '6. Alle cursussen gesorteerd op cursus naam: '
-  mine = cursussen.sort
-  mine.each { |curs| puts curs }
-
+  cursussen.sort.each { |curs| puts curs }
   
   puts '7. Alle cursussen voorafgegaan met de index: '
   
