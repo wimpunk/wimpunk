@@ -29,25 +29,3 @@ class Cursus_applic
   cursussen.each_index { |key| puts "#{key} : #{cursussen[key]}"}
   
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
