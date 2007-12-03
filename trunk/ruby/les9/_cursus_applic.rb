@@ -2,7 +2,7 @@ require "les9/_cursus"
 
 
 def print_lijst lijst
-  lijst.each {|curs| puts curs}
+  lijst.each {|curs| puts "\t#{curs}"}
 end
 
 class Cursus_applic
@@ -18,14 +18,15 @@ class Cursus_applic
   java_cursussen,andere_cursussen = cursussen.partition{|cursus|
     cursus.naam?('Java')
   }
+  puts '   java cursussen:'
   print_lijst java_cursussen
+  puts '   andere cursussen:'
   print_lijst andere_cursussen
   
   puts '6. Alle cursussen gesorteerd op cursus naam: '
   print_lijst cursussen.sort
   
-  # TODO: hier ook print_lijst voor gebruiken.
   puts '7. Alle cursussen voorafgegaan met de index: '
-  cursussen.each_index { |key| puts "#{key} : #{cursussen[key]}"}
+  cursussen.each_index { |key| puts "\t#{key} : #{cursussen[key]}"}
   
 end
