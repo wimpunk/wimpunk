@@ -23,7 +23,7 @@ class Cursus
  
   def to_s
     tijdstip = overdag? ? "overdag" : "\'s avonds"
-    "\tDe cursus \'#{@naam}\' wordt #{tijdstip} gegeven door #{@docent}"
+    "De cursus \'#{@naam}\' wordt #{tijdstip} gegeven door #{@docent}"
   end
 
   def <=> a
