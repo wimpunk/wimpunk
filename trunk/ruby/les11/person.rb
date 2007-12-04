@@ -8,19 +8,25 @@ ActiveRecord::Base.establish_connection(
 )
 class Person < ActiveRecord::Base
   has_many :adress
+def to_s
+  "#{voor_naam} #{familie_naam}"
+end
 end
 
 # ActiveRecord zorgt echt wel voor veel gegevens...
-# puts Person.methods.sort
+puts Person.methods.sort
 
+# aanmaken van een voorbeeld
 person = Person.new do |p|
   p.voor_naam = "frank"
   p.familie_naam = "franken"
 end
- # person.save
- 
- puts person
+# person.save
 
-# puts Person.find(:all, :condition => {:voor_naam => "carl"})
+puts person
+
+Person.find(:all, :conditions => {:voor_naam => "carl"}).each do |p|
+puts p
+end
 
 
