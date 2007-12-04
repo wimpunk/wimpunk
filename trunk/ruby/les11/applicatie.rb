@@ -1,0 +1,1 @@
+require "D:\ruby\lib\ruby\gems\1.8\gems\activerecord-1.15.6\lib\active_record"
