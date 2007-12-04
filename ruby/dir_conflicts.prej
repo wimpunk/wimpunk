@@ -1,0 +1,6 @@
+Trying to add new property 'svn:ignore' with value '.loadpath
+.project
+',
+but property already exists with value '.loadpath
+.project
+'.

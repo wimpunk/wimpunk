@@ -1,0 +1,8 @@
+ruby on rails
+
+-> conventie belangrijk, nauwkeurig volgen
+DRY. don't repeat yourself
+
+active record: beheer van de data, de beans van java maar veel sterker
+action pack: data in de view gaan presenteren
+

@@ -1,0 +1,9 @@
+herhaling vorig les
+data uit databank via model
+foreign keys: enkelvoud joined tabel + _id: person_id
+
+* oefening
+
+DSL: specifiek domain
+
+address.methods
