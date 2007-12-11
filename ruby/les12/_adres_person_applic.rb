@@ -19,7 +19,7 @@ adres.save
 puts Person.voeg_toe('Karl', 'Dierkens', adres);
 
 #main opgave_1 - uitbreiding_2
-jantje = Person.new(:first_name=>'Jantje', :last_name=>'Janssens')
+jantje = Person.new(:voor_naam=>'Jantje', :familie_naam=>'Janssens')
 jantje.bewaar_adres(Address.new(:straat=>'Krekelweg', :stad=>'Ledeberg'))
 puts jantje
 

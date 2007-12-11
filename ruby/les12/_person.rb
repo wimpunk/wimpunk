@@ -1,7 +1,7 @@
 require "les12/_address"
 
 class Person < ActiveRecord::Base
-  
+  belongs_to  :address
   def Person.zoek_alle_voornaam vnaam
     Person.find_all_by_first_name vnaam
   end
@@ -11,11 +11,21 @@ class Person < ActiveRecord::Base
   #  gecreerd in de tabel 'addresses'
   #  een persoon heeft maw altijd een foreign key naar een adres record
   def self.voeg_toe(first, last, adres=nil) 
-#TODO
+    person = Person.new(:voor_naam => first,
+    :familie_naam => last,
+    :email => "",
+    :address => adres)
+    person.save
+    
+    return person
+  end
+  
+  def bewaar_adres(adres)
+    address = adres
   end
   
   def to_s
-  #TODO 
+    "#{voor_naam} #{familie_naam}"
   end
   
 end
