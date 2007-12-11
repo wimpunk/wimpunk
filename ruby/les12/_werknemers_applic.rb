@@ -35,6 +35,9 @@ class WerknemersApplic
   
   class Employee < ActiveRecord::Base
     
+    def to_s
+      "\tEmployee: #{id} - #{naam}"
+    end
     def Employee.met_department_omschrijving
       
     end
@@ -80,6 +83,7 @@ class WerknemersApplic
   
   # alle werknemers
   puts 'alle werknemers'
+  puts Employee.find(:all, :order=> "id")
   
   #employee: 1 - Jan Janssens
   #employee: 2 - Piet Pieters
