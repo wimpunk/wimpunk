@@ -2,7 +2,7 @@ require "D:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record"
 class WerknemersApplic
   
   ActiveRecord::Base.establish_connection(
-  :adapter  => "mysql",
+                                          :adapter  => "mysql",
   :host     => "localhost",
   :username => "vspw",
   :password => "",
@@ -10,6 +10,9 @@ class WerknemersApplic
   )
   
   class Department < ActiveRecord::Base
+    def to_s
+      "Department: #{id} - #{omschrijving}"
+    end
   end
   
   class CreateDepartments < ActiveRecord::Migration
@@ -31,10 +34,10 @@ class WerknemersApplic
   end
   
   class Employee < ActiveRecord::Base
-  
-  def Employee.met_department_omschrijving
     
-  end
+    def Employee.met_department_omschrijving
+      
+    end
   end
   
   class CreateEmployees < ActiveRecord::Migration
@@ -59,80 +62,82 @@ class WerknemersApplic
       drop_table :employees
     end
   end
-
-#####  main 
-CreateDepartments.up
-CreateEmployees.up
-
-# alle afdelingen
-puts 'alle afdelingen'
-
-#department: 1 - HW hardware
-#department: 2 - DVP development
-#department: 3 - SLS sales
-#department: 4 - ADM administration
-
-
-# alle werknemers
-puts 'alle werknemers'
-
-#employee: 1 - Jan Janssens
-#employee: 2 - Piet Pieters
-#employee: 3 - Leen Leningsens
-#employee: 4 - Els Elsenboom
-#employee: 5 - Karel Karels
-#employee: 6 - Jo Jossem
-#employee: 7 - Miet Mieters
-#employee: 8 - No Body
-
-# alle werknemers geordend per afdeling met hoogste id eerst
-puts 'alle werknemers geordend per afdeling met hoogste id eerst'
-
-#volgend department met id '4' 
-#   employee: 4 - Els Elsenboom
-#   employee: 8 - No Body
-#volgend department met id '3' 
-#   employee: 3 - Leen Leningsens
-#volgend department met id '2' 
-#   employee: 2 - Piet Pieters
-#   employee: 7 - Miet Mieters
-#volgend department met id '1' 
-#   employee: 1 - Jan Janssens
-#   employee: 5 - Karel Karels
-#   employee: 6 - Jo Jossem
-
-
-
-# alle werknemers van de afdeling hardware (id = 1)
-puts 'alle werknemers van de afdeling hardware (id = 1)'
-
-#employee: 1 - Jan Janssens
-#employee: 5 - Karel Karels
-#employee: 6 - Jo Jossem
-
-# alle werknemers vanaf de afdeling met id 3 en id 4 enz..
-puts 'alle werknemers vanaf de afdeling met id 3 en id 4 enz..'
-
-
-#employee: 3 - Leen Leningsens
-#employee: 4 - Els Elsenboom
-#employee: 8 - No Body
-
-# alle met functie 'test'
-puts 'alle met functie \'test\''
-
-
-#employee: 2 - Piet Pieters
-#employee: 5 - Karel Karels
-#employee: 6 - Jo Jossem
-
-# alle chefs met hun naam en omschrijving van hun afdeling
-puts 'alle chefs met hun naam en omschrijving van hun afdeling'
-Employee.met_department_omschrijving
-
-#Jan Janssens chef van afdeling 'hardware'
-#Piet Pieters chef van afdeling 'development'
-#Leen Leningsens chef van afdeling 'sales'
-#Els Elsenboom chef van afdeling 'administration'
-
+  
+  #####  main
+  # deze zijn enkel nodig bij een eerste keer...
+  #CreateDepartments.up
+  #CreateEmployees.up
+  
+  # alle afdelingen
+  puts 'alle afdelingen'
+  puts Department.find(:all, :order=> "id")
+  
+  #department: 1 - HW hardware
+  #department: 2 - DVP development
+  #department: 3 - SLS sales
+  #department: 4 - ADM administration
+  
+  
+  # alle werknemers
+  puts 'alle werknemers'
+  
+  #employee: 1 - Jan Janssens
+  #employee: 2 - Piet Pieters
+  #employee: 3 - Leen Leningsens
+  #employee: 4 - Els Elsenboom
+  #employee: 5 - Karel Karels
+  #employee: 6 - Jo Jossem
+  #employee: 7 - Miet Mieters
+  #employee: 8 - No Body
+  
+  # alle werknemers geordend per afdeling met hoogste id eerst
+  puts 'alle werknemers geordend per afdeling met hoogste id eerst'
+  
+  #volgend department met id '4' 
+  #   employee: 4 - Els Elsenboom
+  #   employee: 8 - No Body
+  #volgend department met id '3' 
+  #   employee: 3 - Leen Leningsens
+  #volgend department met id '2' 
+  #   employee: 2 - Piet Pieters
+  #   employee: 7 - Miet Mieters
+  #volgend department met id '1' 
+  #   employee: 1 - Jan Janssens
+  #   employee: 5 - Karel Karels
+  #   employee: 6 - Jo Jossem
+  
+  
+  
+  # alle werknemers van de afdeling hardware (id = 1)
+  puts 'alle werknemers van de afdeling hardware (id = 1)'
+  
+  #employee: 1 - Jan Janssens
+  #employee: 5 - Karel Karels
+  #employee: 6 - Jo Jossem
+  
+  # alle werknemers vanaf de afdeling met id 3 en id 4 enz..
+  puts 'alle werknemers vanaf de afdeling met id 3 en id 4 enz..'
+  
+  
+  #employee: 3 - Leen Leningsens
+  #employee: 4 - Els Elsenboom
+  #employee: 8 - No Body
+  
+  # alle met functie 'test'
+  puts 'alle met functie \'test\''
+  
+  
+  #employee: 2 - Piet Pieters
+  #employee: 5 - Karel Karels
+  #employee: 6 - Jo Jossem
+  
+  # alle chefs met hun naam en omschrijving van hun afdeling
+  puts 'alle chefs met hun naam en omschrijving van hun afdeling'
+  Employee.met_department_omschrijving
+  
+  #Jan Janssens chef van afdeling 'hardware'
+  #Piet Pieters chef van afdeling 'development'
+  #Leen Leningsens chef van afdeling 'sales'
+  #Els Elsenboom chef van afdeling 'administration'
+  
 end
