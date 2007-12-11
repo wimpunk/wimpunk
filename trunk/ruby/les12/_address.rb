@@ -1,9 +1,9 @@
 require "les12/_person"
 
 class Address < ActiveRecord::Base
-  
+  has_many :people
   def self.voeg_toe(straat, stad, person=nil)
-#TODO
+      Address.new(:straat => straat, :stad =>stad, :person =>person).save
   end
 
   def self.zelfde_adres(id)
