@@ -1,4 +1,4 @@
-require "database/address"
+require "les12/_address"
 
 class Person < ActiveRecord::Base
   
@@ -10,7 +10,7 @@ class Person < ActiveRecord::Base
   #  indien adres onbekend is wordt een lege adresrecord 
   #  gecreerd in de tabel 'addresses'
   #  een persoon heeft maw altijd een foreign key naar een adres record
-  def self.add_person(first, last, adres=nil) 
+  def self.voeg_toe(first, last, adres=nil) 
 #TODO
   end
   

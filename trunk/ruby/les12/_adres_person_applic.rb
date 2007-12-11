@@ -1,6 +1,6 @@
-require "C:/ProgFiles/Ruby1.8.6/lib/ruby/gems/1.8/gems/activerecord-1.15.5/lib/active_record"
-require "database/person"
-require "database/address"
+require "D:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record"
+require "les12/_person"
+require "les12/_address"
 
 class AdresPersonApplic
 
@@ -32,7 +32,7 @@ puts Address.voeg_toe('turfsteeg_2', 'heule_2', person)
 
 #main opgave_3
 #zoek via SQuirreL eerst zelf een adres id op in de database
-puts Address.zelfde_adres(#een adres id # )
+#puts Address.zelfde_adres(een adres id})
 
 ## main opgave_4
 ## voeg een persoon met een gekend adres toe in de database

@@ -1,8 +1,8 @@
-require "database/person"
+require "les12/_person"
 
 class Address < ActiveRecord::Base
   
-  def self.add_address(straat, stad, person=nil)
+  def self.voeg_toe(straat, stad, person=nil)
 #TODO
   end
 
