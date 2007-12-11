@@ -23,7 +23,6 @@ jantje = Person.new(:voor_naam=>'Jantje', :familie_naam=>'Janssens')
 jantje.bewaar_adres(Address.new(:straat=>'Krekelweg', :stad=>'Ledeberg'))
 puts jantje
 
-
 #main opgave_2
 person = Person.voeg_toe('jan_2', 'janssens_2')
 puts Address.voeg_toe('turfsteeg', 'heule')
