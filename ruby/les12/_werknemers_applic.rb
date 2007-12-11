@@ -38,9 +38,20 @@ class WerknemersApplic
     def to_s
       "\tEmployee: #{id} - #{naam} - #{department_id}"
     end
+    
     def Employee.met_department_omschrijving
-      
+      Department.find(:all, :order=> "id").each {|d|
+        printf "\t%s chef van afdeling \'%s\'\n", 
+        Employee.find_by_id(d.employee_id).naam, 
+        d.omschrijving
+      }
     end
+    def Employee.met_department_omschrijving2
+#    select * from employees e, departments d
+#where d.employee_id = e.id
+#      Employee.find()
+    end
+
   end
   
   class CreateEmployees < ActiveRecord::Migration
@@ -152,6 +163,8 @@ class WerknemersApplic
   #Jan Janssens chef van afdeling 'hardware'
   #Piet Pieters chef van afdeling 'development'
   #Leen Leningsens chef van afdeling 'sales'
-  #Els Elsenboom chef van afdeling 'administration'
+  #Els Elsenboom chef van afdeling 'administration'  
+  
+  
   
 end
