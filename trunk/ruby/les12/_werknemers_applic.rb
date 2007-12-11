@@ -122,6 +122,7 @@ class WerknemersApplic
   
   # alle werknemers van de afdeling hardware (id = 1)
   puts 'alle werknemers van de afdeling hardware (id = 1)'
+  puts Employee.find_all_by_department_id(1)
   
   #employee: 1 - Jan Janssens
   #employee: 5 - Karel Karels
@@ -129,7 +130,6 @@ class WerknemersApplic
   
   # alle werknemers vanaf de afdeling met id 3 en id 4 enz..
   puts 'alle werknemers vanaf de afdeling met id 3 en id 4 enz..'
-  
   
   #employee: 3 - Leen Leningsens
   #employee: 4 - Els Elsenboom
