@@ -130,7 +130,7 @@ class WerknemersApplic
   
   # alle werknemers vanaf de afdeling met id 3 en id 4 enz..
   puts 'alle werknemers vanaf de afdeling met id 3 en id 4 enz..'
-#  puts Employee.find(:all, :condition => ["department_id = ?", 2])
+  puts Employee.find(:all, :conditions => ["department_id > ?", 2])
   
   #employee: 3 - Leen Leningsens
   #employee: 4 - Els Elsenboom
