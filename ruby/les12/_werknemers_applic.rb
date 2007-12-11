@@ -11,7 +11,7 @@ class WerknemersApplic
   
   class Department < ActiveRecord::Base
     def to_s
-      "Department: #{id} - #{omschrijving}"
+      "\tDepartment: #{id} - #{omschrijving}"
     end
   end
   
@@ -36,7 +36,7 @@ class WerknemersApplic
   class Employee < ActiveRecord::Base
     
     def to_s
-      "\tEmployee: #{id} - #{naam}"
+      "\tEmployee: #{id} - #{naam} - #{department_id}"
     end
     def Employee.met_department_omschrijving
       
@@ -83,7 +83,7 @@ class WerknemersApplic
   
   # alle werknemers
   puts 'alle werknemers'
-  puts Employee.find(:all, :order=> "id")
+  puts Employee.find(:all, :order=> "id DESC")
   
   #employee: 1 - Jan Janssens
   #employee: 2 - Piet Pieters
@@ -96,6 +96,14 @@ class WerknemersApplic
   
   # alle werknemers geordend per afdeling met hoogste id eerst
   puts 'alle werknemers geordend per afdeling met hoogste id eerst'
+  dep = nil
+  Employee.find(:all, :order=> "department_id DESC").each { |e|
+    if !dep or dep.id != e.department_id 
+      dep = Department.find_by_id(e.department_id)
+      puts "Werknemers van department #{dep.id} - #{dep.omschrijving}"
+    end
+    puts e
+  }
   
   #volgend department met id '4' 
   #   employee: 4 - Els Elsenboom
