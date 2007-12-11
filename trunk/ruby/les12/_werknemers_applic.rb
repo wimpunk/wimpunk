@@ -1,7 +1,4 @@
-require "C:/ProgFiles/Ruby1.8.6/lib/ruby/gems/1.8/gems/activerecord-1.15.5/lib/active_record"
-require "database/person"
-require "database/address"
-
+require "D:/ruby/lib/ruby/gems/1.8/gems/activerecord-1.15.6/lib/active_record"
 class WerknemersApplic
   
   ActiveRecord::Base.establish_connection(
@@ -64,8 +61,8 @@ class WerknemersApplic
   end
 
 #####  main 
-#CreateDepartments.up
-#CreateEmployees.up
+CreateDepartments.up
+CreateEmployees.up
 
 # alle afdelingen
 puts 'alle afdelingen'
