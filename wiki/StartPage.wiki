@@ -1,8 +1,10 @@
-#summary One-sentence summary of this page.
+﻿#summary Project start page
 
-= Introduction =
+= SvnUserAdmin =
 
-Add your content here.
+I needed a way to administrate users and groups.  Since I needed to some 
+challenge to verify my Ruby knowledge I give it a try using Ruby.  Follow
+my story on SvnUserAdmin
 
 
 = Details =
