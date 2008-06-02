@@ -22,6 +22,29 @@ class UsergroupController < ApplicationController
     @groups = Group.find :all # needed for the titles
     @users = User.find :all
     
+    @column_header = Group.find :all
+    @row_header = User.find :all
+    
+    @myTable = Array.new
+    row = Array.new
+    blankrow = Array.new
+    for group in @groups
+      row[group.id] = group.name 
+      blankrow[group.id] = 0
+    end
+    @myTable[0] = row
+    
+    for user in @users
+      row = blankrow
+      row[0] = user.fullname
+      
+      for group in user.groups
+        row[group.id] = 1
+      end
+      @myTable[user.id] = row
+    end
+    
+    
   end
 
   def show

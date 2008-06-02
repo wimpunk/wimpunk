@@ -56,6 +56,30 @@ fragment vanop het internet
     </tr>
   <%end%>
 </table>
+<table>
+  <% @myTable.each {|row| 
+            if @myTable.index(row)>0
+                      tag="td"
+            else 
+                      tag="th"
+            end
+          %>
+    <tr>
+    
+            <% row.each_index() {|i| if i==0 %>
+                          <%= "<th>" %>
+                          <%= row[i]?row[i]:"" %>
+                          <%= "</th>" %>
+                <% else %>
+                          <%= "<"+ tag +">" %>
+                          <%= row[i]?row[i]:"" %>
+                          <%= "</"+tag+">" %>
+                <% end
+            } %>
+    </tr>    
+  <% } %>
+</table>
+<%= @myTable %>
 
 <%= link_to 'Previous page', { :page => @usergroup_pages.current.previous } if @usergroup_pages.current.previous %>
 <%= link_to 'Next page', { :page => @usergroup_pages.current.next } if @usergroup_pages.current.next %> 
