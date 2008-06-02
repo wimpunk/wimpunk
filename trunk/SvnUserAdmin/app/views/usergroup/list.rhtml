@@ -1,0 +1,65 @@
+<!--
+ *  $Id$
+ * 
+ *  $LastChangedDate$
+ *  $Rev$
+ *  $Author$
+ *  $URL$
+ * 
+-->
+<h1>Listing usergroups</h1>
+
+<table>
+  <tr>
+    <% for column in Usergroup.content_columns %>
+      <th><%= column.human_name %></th>
+    <% end %>
+  </tr>
+  
+<% for usergroup in @usergroups %>
+    <tr>
+      <% for column in Usergroup.content_columns %>
+        <td><%=h usergroup.send(column.name) %></td>
+      <% end %>
+      <td><%= link_to 'Show', :action => 'show', :id => usergroup %></td>
+      <td><%= link_to 'Edit', :action => 'edit', :id => usergroup %></td>
+      <td><%= link_to 'Destroy', { :action => 'destroy', :id => usergroup }, :confirm => 'Are you sure?', :method => :post %></td>
+    </tr>
+  <% end %>
+</table>
+
+fragment vanop het internet
+
+
+<!--  select "users", "groups[]", @usergroups.map { |g| [g.name,g.id] }, {
+:multiple => true } -->
+
+
+
+
+
+<table>
+  <tr>
+    <th></th>
+    <% for group in @groups %>
+      <th><%= group.name %></th>
+    <%end%>
+  </tr>
+  
+  <!-- http://api.rubyonrails.org/classes/ActiveRecord/Associations/ClassMethods.html -->
+<% for user in @users %>
+    <tr>
+      <td><%= user.login %></td>
+      <% for group in user.groups %>
+        <td><%= group.name %></td>
+      <% end %>
+    </tr>
+  <%end%>
+</table>
+
+<%= link_to 'Previous page', { :page => @usergroup_pages.current.previous } if @usergroup_pages.current.previous %>
+<%= link_to 'Next page', { :page => @usergroup_pages.current.next } if @usergroup_pages.current.next %> 
+
+<br />
+
+<%= link_to 'New usergroup', :action => 'new' %>

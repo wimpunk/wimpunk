@@ -1,0 +1,132 @@
+/* 
+/*
+* $Id: style.css 9 2007-11-07 21:02:56Z wim $
+*
+* $LastChangedDate: 2007-11-07 22:02:56 +0100 (Wed, 07 Nov 2007) $
+* $Rev: 9 $
+* $Author: wim $
+*
+Document   : lijsten
+Created on : 2-jan-2008, 18:00:21
+Author     : wv753780
+Description:
+Purpose of the stylesheet follows.
+*/
+
+/* 
+TODO customize this sample style
+Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+
+body {
+    background : #ffffff; 
+    font-family : Verdana,Lucida,sans-serif;
+}
+
+body,tr,td {
+    font-size : 85%;
+}
+
+a {
+    color : #003399;
+    text-decoration : none;
+}
+
+a:hover {
+    text-decoration : underline;
+}
+
+tr.titleBarTop {
+    background : #003399;
+}
+
+tr.tableBody1 {
+    background : #eeeeee;
+}
+
+tr.tableBody2 {
+    background : #ffffff;
+}
+
+td.tableOutline1 {
+    background : #999999;
+}
+
+td.tableOutline2 {
+    background : #9999ff;
+}
+
+td.tableHead1 {
+    background : #dcdcdc;
+}
+
+tr.tableHead2 {
+    background : #ccccff;
+}
+
+td.footerOutline {
+    background : #a0b8c8;
+}
+
+tr.footerBody {
+    background : #ffffff;
+}
+
+.title {
+    font-size : 200%;
+    font-weight : bold;
+    color : #ffffff;
+}
+
+.heading {
+    font-size : 120%;
+    font-weight : bold;
+}
+
+
+code {
+    color: red;
+    font-size: 150%;
+}
+
+.footer {
+    font-size: 75%;
+    font-style: italic;
+    color: grey;
+}
+/* Hovermenu - zie http://www.dynamicdrive.com/dynamicindex1/hover.htm */
+.hovermenu ul{
+    font: bold 13px arial;
+    padding-left: 0;
+    margin-left: 0;
+    height: 20px;
+}
+
+.hovermenu ul li{
+    list-style: none;
+    display: inline;
+}
+
+.hovermenu ul li a{
+    padding: 2px 0.5em;
+    text-decoration: none;
+    float: left;
+    color: black;
+    background-color: #FFF2BF;
+    border: 2px solid #FFF2BF;
+}
+
+.hovermenu ul li a:hover{
+    background-color: #FFE271;
+    border-style: outset;
+}
+
+html>body .hovermenu ul li a:active{ /* Apply mousedown effect only to NON IE browsers */
+    border-style: inset;
+}
+
+

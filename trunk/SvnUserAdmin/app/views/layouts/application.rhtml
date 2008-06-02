@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xml:lang="en" lang="en">
+<head>
+<!--  
+$Id: application.rhtml 351 2008-05-18 13:12:02Z wv753780 $
+
+$LastChangedDate: 2008-05-18 15:12:02 +0200 (Sun, 18 May 2008) $
+$Rev: 351 $
+$Author: wv753780 $
+$URL: svn+ssh://megaton/disk2/home/es5/wv753780/svn/wimscorner/trunk/SvnUserAdmin/app/views/layouts/application.rhtml $
+--> 
+
+<meta http-equiv="Content-type"
+content="text/html; charset=utf-8" />
+<title>useradmin:<%= controller.controller_name %>:<%= controller.action_name %></title>  
+<%= stylesheet_link_tag 'lijsten' %>
+</head>
+<body>
+<div class="hovermenu">
+<ul>
+  <li><%= link_to 'gebruikers administratie', {:controller => 'user'} %></li>
+  <li><%= link_to 'groep administratie', {:controller=>'group'} %></li>
+  <li><%= link_to 'gebruikers groepen', {:controller=>'usergroup'} %></li>
+  </ul>
+</div>
+<p style="color: green"><%= flash[:notice] %></p>
+<div id="content">
+<% 
+# yield wordt vervangen door de rhtml
+%>
+<%= yield %>
+</div>
+
+  <div class="footer">
+    <%= @svnid || "$Id: application.rhtml 351 2008-05-18 13:12:02Z wv753780 $" %>
+  </div>
+</body>
+</html>

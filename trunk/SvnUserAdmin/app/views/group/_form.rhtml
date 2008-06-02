@@ -1,0 +1,19 @@
+<!--
+ *  $Id: _form.rhtml 351 2008-05-18 13:12:02Z wv753780 $
+ * 
+ *  $LastChangedDate: 2008-05-18 15:12:02 +0200 (Sun, 18 May 2008) $
+ *  $Rev: 351 $
+ *  $Author: wv753780 $
+ *  $URL: svn+ssh://megaton/disk2/home/es5/wv753780/svn/wimscorner/trunk/SvnUserAdmin/app/views/group/_form.rhtml $
+ * 
+ -->
+<%= error_messages_for 'group' %>
+
+<!--[form:group]-->
+<p><label for="group_name">Name</label><br/>
+<%= text_field 'group', 'name'  %></p>
+
+<p><label for="group_desc">Desc</label><br/>
+<%= text_field 'group', 'desc'  %></p>
+<!--[eoform:group]-->
+
