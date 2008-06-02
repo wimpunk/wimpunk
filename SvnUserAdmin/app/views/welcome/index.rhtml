@@ -1,0 +1,17 @@
+<!--
+ *  $Id: index.rhtml 351 2008-05-18 13:12:02Z wv753780 $
+ * 
+ *  $LastChangedDate: 2008-05-18 15:12:02 +0200 (Sun, 18 May 2008) $
+ *  $Rev: 351 $
+ *  $Author: wv753780 $
+ *  $URL: svn+ssh://megaton/disk2/home/es5/wv753780/svn/wimscorner/trunk/SvnUserAdmin/app/views/welcome/index.rhtml $
+ * 
+ -->
+<h1>Welcome</h1>
+<p>Via  het menu hierboven heb je toegang tot de volgend onderdelen:</p>
+<ul>
+<li><%= link_to "users", {:controller => "user"} %></li>
+<li><%= link_to "groups", {:controller => "group"}  %></li>
+<li><%= link_to "usergroups", {:controller => "usergroup"} %></li>
+</ul>
+

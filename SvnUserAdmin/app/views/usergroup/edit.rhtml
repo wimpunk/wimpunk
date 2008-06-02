@@ -1,0 +1,18 @@
+<!--
+ *  $Id$
+ * 
+ *  $LastChangedDate$
+ *  $Rev$
+ *  $Author$
+ *  $URL$
+ * 
+ -->
+<h1>Editing usergroup</h1>
+
+<% form_tag :action => 'update', :id => @usergroup do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag 'Edit' %>
+<% end %>
+
+<%= link_to 'Show', :action => 'show', :id => @usergroup %> |
+<%= link_to 'Back', :action => 'list' %>

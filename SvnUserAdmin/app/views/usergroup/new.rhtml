@@ -1,0 +1,17 @@
+<!--
+ *  $Id$
+ * 
+ *  $LastChangedDate$
+ *  $Rev$
+ *  $Author$
+ *  $URL$
+ * 
+ -->
+<h1>New usergroup</h1>
+
+<% form_tag :action => 'create' do %>
+  <%= render :partial => 'form' %>
+  <%= submit_tag "Create" %>
+<% end %>
+
+<%= link_to 'Back', :action => 'list' %>

@@ -1,0 +1,22 @@
+<!--
+ *  $Id: _form.rhtml 351 2008-05-18 13:12:02Z wv753780 $
+ * 
+ *  $LastChangedDate: 2008-05-18 15:12:02 +0200 (Sun, 18 May 2008) $
+ *  $Rev: 351 $
+ *  $Author: wv753780 $
+ *  $URL: svn+ssh://megaton/disk2/home/es5/wv753780/svn/wimscorner/trunk/SvnUserAdmin/app/views/user/_form.rhtml $
+ * 
+ -->
+<%= error_messages_for 'user' %>
+
+<!--[form:user]-->
+<p><label for="user_login">Login</label><br/>
+<%= text_field 'user', 'login'  %></p>
+
+<p><label for="user_fullname">Fullname</label><br/>
+<%= text_field 'user', 'fullname'  %></p>
+
+<p><label for="user_password">Password</label><br/>
+<%= password_field 'user', 'password'  %></p>
+<!--[eoform:user]-->
+
