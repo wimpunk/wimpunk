@@ -1,2 +1,2 @@
-#summary One-sentence summary of this page.
+#summary Twitter-pidgin-status-update start wiki page
 See http://home.tisnix.be/trac/twitterstatus for more info
