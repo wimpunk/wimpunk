@@ -14,7 +14,7 @@ See http://home.tisnix.be/trac/twitterstatus for more info (rev16)
 = Verification key =
 See VerificationKey
 = Installation = 
- * Get the plugin from http://svn.tisnix.be/repo/pidgin-twitterstatus (there is no release yet)
+ * Get the plugin from http://wimpunk.googlecode.com/files/twitter.pl
  * Install the twitter oauth module using cpan
 {{{
 cpan Net::Twitter::OAuth
@@ -23,5 +23,3 @@ cpan Net::Twitter::OAuth
  * copy twitter.pl to your plugins directory.  On linux you can use the ~/.purple/plugins directory.  On windows, you can use the %APPDATA%\.purple\plugins directory.
 = Configuration = 
 When you go to the preferences windows (r15), you will see an url and pin to configure the oauth.  Open the url in your favorite browser and authenticate the application.  After pidgin gets authenticated correctly, you will see a token and a secret when looking at the preferences.
-
-
