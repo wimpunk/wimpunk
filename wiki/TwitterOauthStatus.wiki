@@ -1,5 +1,6 @@
 #summary Twitter-pidgin-status-update start wiki page
-See http://home.tisnix.be/trac/twitterstatus for more info (rev16)
+
+This is a copy of http://home.tisnix.be/trac/twitterstatus (rev16) which is the place where I develop.  The url is only available when I'm online.
 
 = Introduction =
  * based on http://code.google.com/p/pidgin-twitterstatus/
