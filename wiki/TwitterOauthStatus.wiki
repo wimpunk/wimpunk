@@ -1,2 +1,27 @@
 #summary Twitter-pidgin-status-update start wiki page
-See http://home.tisnix.be/trac/twitterstatus for more info
+See http://home.tisnix.be/trac/twitterstatus for more info (rev16)
+
+= Introduction =
+ * based on http://code.google.com/p/pidgin-twitterstatus/
+ * linked ~/.purple/plugins/twitter.pl to $HOME/src/pidgin-twitterstatus/twitter.pl
+ * repo accessible as http://svn.tisnix.be/repo/pidgin-twitterstatus
+ * pidgin documentation: http://developer.pidgin.im/doxygen/dev/html/perl-howto.html
+ * twitter perl library: http://apiwiki.twitter.com/Libraries
+ * oauth example: http://staynalive.com/articles/2009/05/19/social-coding-how-to-code-twitters-oauth-using-netoauth-and-perl/
+ * net::oauth installation for perl: perl -MCPAN -e "install Net::OAuth"  or it could be installed as  apt-get install libnet-oauth-perl
+ * this could be helpful too: http://log.damog.net/2009/05/twitters-oauth-perl/
+ * installing perl / twitter in windows: http://code.google.com/p/pidgin-status-to-twitter/issues/detail?id=2
+= Verification key =
+See VerificationKey
+= Installation = 
+ * Get the plugin from http://svn.tisnix.be/repo/pidgin-twitterstatus (there is no release yet)
+ * Install the twitter oauth module using cpan
+{{{
+cpan Net::Twitter::OAuth
+}}}
+ If you use windows, this can be a hint: http://code.google.com/p/pidgin-status-to-twitter/issues/detail?id=2
+ * copy twitter.pl to your plugins directory.  On linux you can use the ~/.purple/plugins directory.  On windows, you can use the %APPDATA%\.purple\plugins directory.
+= Configuration = 
+When you go to the preferences windows (r15), you will see an url and pin to configure the oauth.  Open the url in your favorite browser and authenticate the application.  After pidgin gets authenticated correctly, you will see a token and a secret when looking at the preferences.
+
+
