@@ -24,3 +24,8 @@ cpan Net::Twitter::OAuth
  * copy twitter.pl to your plugins directory.  On linux you can use the ~/.purple/plugins directory.  On windows, you can use the %APPDATA%\.purple\plugins directory.
 = Configuration = 
 When you go to the preferences windows (r15), you will see an url and pin to configure the oauth.  Open the url in your favorite browser and authenticate the application.  After pidgin gets authenticated correctly, you will see a token and a secret when looking at the preferences.
+
+= Issues =
+ * troubles when connection with twitter server disconnects.
+ * don't know it is related to the previous bug but sometimes it stops updating.
+ * the correct perl module is not available with the default opensuse 11.2 distribution
