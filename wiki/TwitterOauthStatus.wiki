@@ -1,4 +1,3 @@
 #summary Twitter-pidgin-status-update start wiki page
 
-All the stuff about the pidgin status updater has been moved to http://www.tisnix.be/twitter-oauth-status/ and the code has been moved to https://launchpad.net/purple-oauth-twitterstatus to make it easier accessable and give users the possibility to report bugs.
-
+All the stuff about the pidgin status updater has been moved to [https://github.com/wimpunk/purple-oauth-twitterstatus github] to make it easier accessable and give users the possibility to report bugs.
